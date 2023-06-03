@@ -3,19 +3,7 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 var rotate = function(matrix) {
-    const leng = matrix.length
-    // for (let row = 0; row < Math.floor(leng / 2); row++) {
-    //     const r1 = row;
-    //     const rn = leng - 1 - row;
-    //     for (let i = r1; i < rn; i++) {
-    //         const offset = i - r1;
-    //         const top = matrix[r1][i];
-    //         matrix[r1][i] = matrix[rn - offset][r1];
-    //         matrix[rn - offset][r1] = matrix[rn][rn - offset];
-    //         matrix[rn][rn - offset] = matrix[i][rn];
-    //         matrix[i][rn] = top;
-    //     }
-    // }
+    const leng = matrix.length;
     for (let i = 0; i < matrix.length; i++) {
         const n = leng - 1 - i;
         for (let j = i; j < n; j++) {
@@ -27,5 +15,5 @@ var rotate = function(matrix) {
             matrix[j][n] = top;
         }
     }
-    return matrix
+    return matrix;
 };
