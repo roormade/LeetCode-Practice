@@ -1,6 +1,6 @@
 
 var RandomizedSet = function() {
-    this.storage = new Set(); 
+    this.storage = new Set();
 };
 
 /** 
@@ -11,10 +11,9 @@ RandomizedSet.prototype.insert = function(val) {
     if (!this.storage.has(val)) {
         this.storage.add(val);
         return true;
-    }
+    };
     return false;
 };
-
 /** 
  * @param {number} val
  * @return {boolean}
@@ -23,7 +22,7 @@ RandomizedSet.prototype.remove = function(val) {
     if (this.storage.has(val)) {
         this.storage.delete(val);
         return true;
-    }
+    };
     return false;
 };
 
@@ -31,7 +30,7 @@ RandomizedSet.prototype.remove = function(val) {
  * @return {number}
  */
 RandomizedSet.prototype.getRandom = function() {
-    const hi = this.storage.size
+    const hi = this.storage.size;
     const ind = Math.floor(Math.random() * hi);
     const arr = [];
     this.storage.forEach((v) => arr.push(v));
