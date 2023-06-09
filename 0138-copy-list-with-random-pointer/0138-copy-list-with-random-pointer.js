@@ -16,6 +16,7 @@ var copyRandomList = function(head) {
     
     const dCopy = new Map();
     let node = head;
+    
     while (node) {
         dCopy.set(node, new Node(node.val));
         node = node.next;
@@ -28,6 +29,5 @@ var copyRandomList = function(head) {
         dNode.random = dCopy.get(node.random) || null;
         node = node.next;
     }
-    
     return dCopy.get(head);
 };
