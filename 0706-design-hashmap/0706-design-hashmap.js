@@ -1,8 +1,6 @@
 
 var MyHashMap = function() {
     this.mash = {};
-    // return this.mash;
-    // return new Map();
 };
 
 /** 
