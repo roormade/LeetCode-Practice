@@ -4,14 +4,6 @@
  * @param {string} longUrl
  * @return {string}
  */
-// const rdmStr = function() {
-//     const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-//     let rdm = '';
-//     for (let i = 0; i < 6; i++) {
-//         rdm += chars[Math.floor(Math.random() * chars.length)];
-//     }
-//     return rdm;
-// };
 
 const mapE = new Map();
 const mapD = new Map();
