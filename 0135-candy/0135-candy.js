@@ -15,5 +15,6 @@ var candy = function(ratings) {
             alCnd[i] = Math.max(alCnd[i], alCnd[i + 1] + 1);
         }
     }
+    console.log(alCnd);
     return alCnd.reduce((a, b) => a + b);
 };
