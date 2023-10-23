@@ -3,12 +3,20 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    const dSet = {};
-    for (let i = 0; i < nums.length; i++) {
-        if (dSet.hasOwnProperty(nums[i])) {
+    // const dObj = {};
+    // for (let i = 0; i < nums.length; i++) {
+    //     if (dObj.hasOwnProperty(nums[i])) {
+    //         return true;
+    //     }
+    //     dObj[nums[i]] = true;
+    // }
+    // return false;
+    const dSet = new Set();
+    for (let i = 0; i < nums.length; i++) {   
+        if (dSet.has(nums[i])) {
             return true;
         }
-        dSet[nums[i]] = true;
+        dSet.add(nums[i]);
     }
     return false;
 };
